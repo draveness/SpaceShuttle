@@ -81,6 +81,7 @@
 		182136CE1B0B209D00EA57E6 /* SpaceShuttle */ = {
 			isa = PBXGroup;
 			children = (
+				182136F51B0B20B100EA57E6 /* Classes */,
 				182136D31B0B209D00EA57E6 /* AppDelegate.h */,
 				182136D41B0B209D00EA57E6 /* AppDelegate.m */,
 				182136D61B0B209D00EA57E6 /* ViewController.h */,
@@ -118,6 +119,13 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		182136F51B0B20B100EA57E6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
