@@ -14,6 +14,8 @@
 		182136DD1B0B209D00EA57E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182136DC1B0B209D00EA57E6 /* Images.xcassets */; };
 		182136E01B0B209D00EA57E6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182136DE1B0B209D00EA57E6 /* LaunchScreen.xib */; };
 		182136EC1B0B209D00EA57E6 /* SpaceShuttleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 182136EB1B0B209D00EA57E6 /* SpaceShuttleTests.m */; };
+		182136F81B0B219B00EA57E6 /* SpaceShuttleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 182136F71B0B219B00EA57E6 /* SpaceShuttleManager.m */; };
+		18614D1C1B0DB85300C512C0 /* SpaceShuttleRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18614D1B1B0DB85300C512C0 /* SpaceShuttleRouter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,11 @@
 		182136E51B0B209D00EA57E6 /* SpaceShuttleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceShuttleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		182136EA1B0B209D00EA57E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182136EB1B0B209D00EA57E6 /* SpaceShuttleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpaceShuttleTests.m; sourceTree = "<group>"; };
+		182136F61B0B219B00EA57E6 /* SpaceShuttleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceShuttleManager.h; sourceTree = "<group>"; };
+		182136F71B0B219B00EA57E6 /* SpaceShuttleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceShuttleManager.m; sourceTree = "<group>"; };
+		18614D1A1B0DB85300C512C0 /* SpaceShuttleRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceShuttleRouter.h; sourceTree = "<group>"; };
+		18614D1B1B0DB85300C512C0 /* SpaceShuttleRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceShuttleRouter.m; sourceTree = "<group>"; };
+		18614D3A1B0DC36000C512C0 /* SpaceShuttle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpaceShuttle.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +130,11 @@
 		182136F51B0B20B100EA57E6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				182136F61B0B219B00EA57E6 /* SpaceShuttleManager.h */,
+				182136F71B0B219B00EA57E6 /* SpaceShuttleManager.m */,
+				18614D1A1B0DB85300C512C0 /* SpaceShuttleRouter.h */,
+				18614D1B1B0DB85300C512C0 /* SpaceShuttleRouter.m */,
+				18614D3A1B0DC36000C512C0 /* SpaceShuttle.h */,
 			);
 			path = Classes;
 			sourceTree = SOURCE_ROOT;
@@ -227,6 +239,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182136F81B0B219B00EA57E6 /* SpaceShuttleManager.m in Sources */,
+				18614D1C1B0DB85300C512C0 /* SpaceShuttleRouter.m in Sources */,
 				182136D81B0B209D00EA57E6 /* ViewController.m in Sources */,
 				182136D51B0B209D00EA57E6 /* AppDelegate.m in Sources */,
 				182136D21B0B209D00EA57E6 /* main.m in Sources */,
@@ -424,6 +438,7 @@
 				182136F11B0B209D00EA57E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		182136F21B0B209D00EA57E6 /* Build configuration list for PBXNativeTarget "SpaceShuttleTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +447,7 @@
 				182136F41B0B209D00EA57E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

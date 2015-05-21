@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SpaceShuttle.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [SpaceShuttleRouter addRouteFrom:ViewController.class to:self.class];
+    [SpaceShuttleRouter addRouteFrom:ViewController.class to:UIViewController.class];
+    [SpaceShuttleRouter addRouteFrom:UIViewController.class to:UIViewController.class];
+    [SpaceShuttleRouter removeRouteFrom:UIViewController.class to:UIViewController.class];
+    NSLog(@"%d", [SpaceShuttleRouter checkValidRouteFrom:UIViewController.class to:UIViewController.class]);
+    NSLog(@"%@", [SpaceShuttleRouter currentDestinations]);
 }
 
 - (void)didReceiveMemoryWarning {
