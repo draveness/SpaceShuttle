@@ -10,7 +10,7 @@
 
 @interface SpaceShuttleRouter : NSObject
 
-+ (NSSet *)currentDestinations;
++ (NSMutableDictionary *)currentRoutes;
 + (void)addRouteFrom:(Class)fromKlass to:(Class)toKlass;
 + (void)removeRouteFrom:(Class)fromKlass to:(Class)toKlass;
 + (BOOL)checkValidRouteFrom:(Class)fromKlass to:(Class)toKlass;

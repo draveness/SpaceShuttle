@@ -16,6 +16,7 @@
 		182136EC1B0B209D00EA57E6 /* SpaceShuttleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 182136EB1B0B209D00EA57E6 /* SpaceShuttleTests.m */; };
 		182136F81B0B219B00EA57E6 /* SpaceShuttleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 182136F71B0B219B00EA57E6 /* SpaceShuttleManager.m */; };
 		18614D1C1B0DB85300C512C0 /* SpaceShuttleRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18614D1B1B0DB85300C512C0 /* SpaceShuttleRouter.m */; };
+		18614D411B0DC7D000C512C0 /* UIViewController+Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 18614D401B0DC7D000C512C0 /* UIViewController+Route.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		18614D1A1B0DB85300C512C0 /* SpaceShuttleRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceShuttleRouter.h; sourceTree = "<group>"; };
 		18614D1B1B0DB85300C512C0 /* SpaceShuttleRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceShuttleRouter.m; sourceTree = "<group>"; };
 		18614D3A1B0DC36000C512C0 /* SpaceShuttle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpaceShuttle.h; sourceTree = "<group>"; };
+		18614D3F1B0DC7D000C512C0 /* UIViewController+Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Route.h"; sourceTree = "<group>"; };
+		18614D401B0DC7D000C512C0 /* UIViewController+Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Route.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,9 +138,19 @@
 				18614D1A1B0DB85300C512C0 /* SpaceShuttleRouter.h */,
 				18614D1B1B0DB85300C512C0 /* SpaceShuttleRouter.m */,
 				18614D3A1B0DC36000C512C0 /* SpaceShuttle.h */,
+				18614D3E1B0DC7C800C512C0 /* Category */,
 			);
 			path = Classes;
 			sourceTree = SOURCE_ROOT;
+		};
+		18614D3E1B0DC7C800C512C0 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				18614D3F1B0DC7D000C512C0 /* UIViewController+Route.h */,
+				18614D401B0DC7D000C512C0 /* UIViewController+Route.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -241,6 +254,7 @@
 			files = (
 				182136F81B0B219B00EA57E6 /* SpaceShuttleManager.m in Sources */,
 				18614D1C1B0DB85300C512C0 /* SpaceShuttleRouter.m in Sources */,
+				18614D411B0DC7D000C512C0 /* UIViewController+Route.m in Sources */,
 				182136D81B0B209D00EA57E6 /* ViewController.m in Sources */,
 				182136D51B0B209D00EA57E6 /* AppDelegate.m in Sources */,
 				182136D21B0B209D00EA57E6 /* main.m in Sources */,

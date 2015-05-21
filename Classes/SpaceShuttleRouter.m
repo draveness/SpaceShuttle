@@ -10,7 +10,7 @@
 
 @interface SpaceShuttleRouter ()
 
-@property (nonatomic, strong) NSMutableDictionary *destinations;
+@property (nonatomic, strong) NSMutableDictionary *routes;
 
 @end
 
@@ -21,22 +21,22 @@
     static SpaceShuttleRouter *instance;
     dispatch_once(&once, ^{
         instance = [[self alloc] init];
-        instance.destinations = [[NSMutableDictionary alloc] init];
+        instance.routes = [[NSMutableDictionary alloc] init];
     });
     return instance;
 }
 
-+ (NSMutableDictionary *)currentDestinations {
-    return [[[self sharedInstance] destinations] copy];
++ (NSMutableDictionary *)currentRoutes {
+    return [[[self sharedInstance] routes] copy];
 }
 
 + (void)addRouteFrom:(Class)fromKlass to:(Class)toKlass {
     NSString *fromClass = NSStringFromClass(fromKlass);
     NSString *toClass = NSStringFromClass(toKlass);
 
-    NSMutableSet *set = [[self sharedInstance] destinations][fromClass];
+    NSMutableSet *set = [[self sharedInstance] routes][fromClass];
     if (!set) {
-        [[self sharedInstance] destinations][fromClass] = [[NSMutableSet alloc] initWithObjects:toClass, nil];
+        [[self sharedInstance] routes][fromClass] = [[NSMutableSet alloc] initWithObjects:toClass, nil];
         return;
     }
     [set addObject:toClass];
@@ -46,9 +46,9 @@
     NSString *fromClass = NSStringFromClass(fromKlass);
     NSString *toClass = NSStringFromClass(toKlass);
 
-    NSMutableSet *set = [[self sharedInstance] destinations][fromClass];
+    NSMutableSet *set = [[self sharedInstance] routes][fromClass];
     if (!set) {
-        [[self sharedInstance] destinations][fromClass] = [[NSMutableSet alloc] init];
+        [[self sharedInstance] routes][fromClass] = [[NSMutableSet alloc] init];
         return;
     }
     [set removeObject:toClass];
@@ -58,7 +58,7 @@
     NSString *fromClass = NSStringFromClass(fromKlass);
     NSString *toClass = NSStringFromClass(toKlass);
 
-    NSMutableSet *set = [[self sharedInstance] destinations][fromClass];
+    NSMutableSet *set = [[self sharedInstance] routes][fromClass];
     if (!set) return NO;
     return [set containsObject:toClass];
 }

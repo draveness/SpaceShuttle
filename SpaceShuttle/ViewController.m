@@ -22,12 +22,8 @@
     [SpaceShuttleRouter addRouteFrom:UIViewController.class to:UIViewController.class];
     [SpaceShuttleRouter removeRouteFrom:UIViewController.class to:UIViewController.class];
     NSLog(@"%d", [SpaceShuttleRouter checkValidRouteFrom:UIViewController.class to:UIViewController.class]);
-    NSLog(@"%@", [SpaceShuttleRouter currentDestinations]);
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSLog(@"%@", [SpaceShuttleRouter currentRoutes]);
+    NSLog(@"%@", [self currentDestinations]);
 }
 
 @end

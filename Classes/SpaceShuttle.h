@@ -12,4 +12,6 @@
 #import "SpaceShuttleManager.h"
 #import "SpaceShuttleRouter.h"
 
+#import "Category/UIViewController+Route.h"
+
 #endif
