@@ -31,6 +31,9 @@
 }
 
 + (void)addRouteFrom:(Class)fromKlass to:(Class)toKlass {
+    [self sanityCheck:fromKlass];
+    [self sanityCheck:toKlass];
+
     NSString *fromClass = NSStringFromClass(fromKlass);
     NSString *toClass = NSStringFromClass(toKlass);
 
@@ -43,6 +46,9 @@
 }
 
 + (void)removeRouteFrom:(Class)fromKlass to:(Class)toKlass {
+    [self sanityCheck:fromKlass];
+    [self sanityCheck:toKlass];
+
     NSString *fromClass = NSStringFromClass(fromKlass);
     NSString *toClass = NSStringFromClass(toKlass);
 
@@ -55,12 +61,19 @@
 }
 
 + (BOOL)checkValidRouteFrom:(Class)fromKlass to:(Class)toKlass {
+    [self sanityCheck:fromKlass];
+    [self sanityCheck:toKlass];
+
     NSString *fromClass = NSStringFromClass(fromKlass);
     NSString *toClass = NSStringFromClass(toKlass);
 
     NSMutableSet *set = [[self sharedInstance] routes][fromClass];
     if (!set) return NO;
     return [set containsObject:toClass];
+}
+
++ (void)sanityCheck:(Class)klass {
+    NSAssert([klass isSubclassOfClass:[UIViewController class]], @"FATAL ERROR: CLASS MUST BE UIViewController's SUBCLASS");
 }
 
 @end
