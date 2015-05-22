@@ -1,5 +1,5 @@
 //
-//  UIViewController+Navigation.h
+//  SuccViewController.h
 //  SpaceShuttle
 //
 //  Created by apple on 15/5/21.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIViewController (Navigation)
+@interface SuccViewController : UIViewController
 
-- (void)launchTo:(Class)klass;
+@property (nonatomic, strong) NSNumber *test;
 
 @end

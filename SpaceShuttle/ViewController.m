@@ -7,7 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "SuccViewController.h"
 #import "SpaceShuttle.h"
+#import "PresentTransitionTask.h"
 
 @interface ViewController ()
 
@@ -18,13 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    [SpaceShuttleRouter addRouteFrom:ViewController.class to:self.class];
-    [SpaceShuttleRouter addRouteFrom:ViewController.class to:UIViewController.class];
-    [SpaceShuttleRouter addRouteFrom:UIViewController.class to:UIViewController.class];
-    [SpaceShuttleRouter removeRouteFrom:UIViewController.class to:UIViewController.class];
-    NSLog(@"%d", [SpaceShuttleRouter checkValidRouteFrom:UIViewController.class to:UIViewController.class]);
-    NSLog(@"%@", [SpaceShuttleRouter currentRoutes]);
-    NSLog(@"%@", [self currentDestinations]);
+    [SpaceShuttleRouter addRouteFrom:ViewController.class to:SuccViewController.class];
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setFrame:CGRectMake(0, 0, 200, 50)];
     [button setTitle:@"Push" forState:UIControlStateNormal];
@@ -35,7 +31,12 @@
 }
 
 - (void)push {
-    [self launchTo:self.class];
+    PresentTransitionTask *task = [[PresentTransitionTask alloc] initWithDepature:self
+                                        ];
+    task.completion = ^{
+        self.view.backgroundColor = [UIColor redColor];
+    };
+    [task launch];
 }
 
 @end
