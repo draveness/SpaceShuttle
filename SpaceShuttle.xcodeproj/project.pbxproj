@@ -17,10 +17,9 @@
 		182136F81B0B219B00EA57E6 /* SpaceShuttleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 182136F71B0B219B00EA57E6 /* SpaceShuttleManager.m */; };
 		185AB3101B0EC64B00ADF537 /* PresentTransitionTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AB30F1B0EC64B00ADF537 /* PresentTransitionTask.m */; };
 		18614D1C1B0DB85300C512C0 /* SpaceShuttleRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18614D1B1B0DB85300C512C0 /* SpaceShuttleRouter.m */; };
-		18614D411B0DC7D000C512C0 /* UIViewController+Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 18614D401B0DC7D000C512C0 /* UIViewController+Route.m */; };
 		18614D481B0DF24B00C512C0 /* SpaceShuttleTransitionTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 18614D471B0DF24B00C512C0 /* SpaceShuttleTransitionTask.m */; };
-		18614D4B1B0DF72C00C512C0 /* UIViewController+Supply.m in Sources */ = {isa = PBXBuildFile; fileRef = 18614D4A1B0DF72C00C512C0 /* UIViewController+Supply.m */; };
 		18614D4E1B0DF7E200C512C0 /* SuccViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18614D4D1B0DF7E200C512C0 /* SuccViewController.m */; };
+		18790CAC1B106C6600173891 /* UIViewController+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18790CAB1B106C6600173891 /* UIViewController+Helper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,14 +53,12 @@
 		18614D1A1B0DB85300C512C0 /* SpaceShuttleRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceShuttleRouter.h; sourceTree = "<group>"; };
 		18614D1B1B0DB85300C512C0 /* SpaceShuttleRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceShuttleRouter.m; sourceTree = "<group>"; };
 		18614D3A1B0DC36000C512C0 /* SpaceShuttle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpaceShuttle.h; sourceTree = "<group>"; };
-		18614D3F1B0DC7D000C512C0 /* UIViewController+Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Route.h"; sourceTree = "<group>"; };
-		18614D401B0DC7D000C512C0 /* UIViewController+Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Route.m"; sourceTree = "<group>"; };
 		18614D461B0DF24B00C512C0 /* SpaceShuttleTransitionTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceShuttleTransitionTask.h; sourceTree = "<group>"; };
 		18614D471B0DF24B00C512C0 /* SpaceShuttleTransitionTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceShuttleTransitionTask.m; sourceTree = "<group>"; };
-		18614D491B0DF72C00C512C0 /* UIViewController+Supply.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Supply.h"; sourceTree = "<group>"; };
-		18614D4A1B0DF72C00C512C0 /* UIViewController+Supply.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Supply.m"; sourceTree = "<group>"; };
 		18614D4C1B0DF7E200C512C0 /* SuccViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuccViewController.h; sourceTree = "<group>"; };
 		18614D4D1B0DF7E200C512C0 /* SuccViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuccViewController.m; sourceTree = "<group>"; };
+		18790CAA1B106C6600173891 /* UIViewController+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Helper.h"; sourceTree = "<group>"; };
+		18790CAB1B106C6600173891 /* UIViewController+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Helper.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,10 +161,8 @@
 		18614D3E1B0DC7C800C512C0 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				18614D3F1B0DC7D000C512C0 /* UIViewController+Route.h */,
-				18614D401B0DC7D000C512C0 /* UIViewController+Route.m */,
-				18614D491B0DF72C00C512C0 /* UIViewController+Supply.h */,
-				18614D4A1B0DF72C00C512C0 /* UIViewController+Supply.m */,
+				18790CAA1B106C6600173891 /* UIViewController+Helper.h */,
+				18790CAB1B106C6600173891 /* UIViewController+Helper.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -273,12 +268,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				18614D4E1B0DF7E200C512C0 /* SuccViewController.m in Sources */,
-				18614D4B1B0DF72C00C512C0 /* UIViewController+Supply.m in Sources */,
 				182136F81B0B219B00EA57E6 /* SpaceShuttleManager.m in Sources */,
 				18614D1C1B0DB85300C512C0 /* SpaceShuttleRouter.m in Sources */,
 				18614D481B0DF24B00C512C0 /* SpaceShuttleTransitionTask.m in Sources */,
-				18614D411B0DC7D000C512C0 /* UIViewController+Route.m in Sources */,
 				182136D81B0B209D00EA57E6 /* ViewController.m in Sources */,
+				18790CAC1B106C6600173891 /* UIViewController+Helper.m in Sources */,
 				182136D51B0B209D00EA57E6 /* AppDelegate.m in Sources */,
 				182136D21B0B209D00EA57E6 /* main.m in Sources */,
 				185AB3101B0EC64B00ADF537 /* PresentTransitionTask.m in Sources */,

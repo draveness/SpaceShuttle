@@ -15,14 +15,11 @@ typedef enum : NSUInteger {
     SpaceShuttleTransitionStylePop,
 } SpaceShuttleTransitionStyle;
 
-typedef void(^SpaceShuttleCompletionBlock)(void);
-
 @interface SpaceShuttleTransitionTask : NSObject
 
 @property (nonatomic, weak, readonly) UIViewController *departure;
 @property (nonatomic, strong) Class destination;
 @property (nonatomic, assign) SpaceShuttleTransitionStyle transitionStyle;
-@property (nonatomic, strong) SpaceShuttleCompletionBlock completion;
 @property (nonatomic, strong) NSDictionary *supplies;
 @property (nonatomic, strong) NSArray *required;
 @property (nonatomic, assign) BOOL animated;

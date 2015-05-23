@@ -17,10 +17,15 @@
 
 @implementation ViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [SpaceShuttleRouter addRouteFrom:ViewController.class to:SuccViewController.class];
+    [SpaceShuttleRouter addRouteFrom:SuccViewController.class to:ViewController.class];
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setFrame:CGRectMake(0, 0, 200, 50)];
     [button setTitle:@"Push" forState:UIControlStateNormal];
@@ -28,14 +33,13 @@
     [button addTarget:self action:@selector(push) forControlEvents:UIControlEventTouchUpInside];
     [button setCenter:self.view.center];
     [self.view addSubview:button];
+    NSLog(@"ViewController %@", self.test);
+
 }
 
 - (void)push {
     PresentTransitionTask *task = [[PresentTransitionTask alloc] initWithDepature:self
                                         ];
-    task.completion = ^{
-        self.view.backgroundColor = [UIColor redColor];
-    };
     [task launch];
 }
 
