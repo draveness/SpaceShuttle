@@ -8,6 +8,7 @@
 
 #import "SuccViewController.h"
 #import "SpaceShuttle.h"
+
 @interface SuccViewController ()
 
 @end
@@ -24,14 +25,11 @@
     [button addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     [button setCenter:self.view.center];
     [self.view addSubview:button];
-    NSLog(@"SuccViewController %@", self.test);
+    NSLog(@"SuccViewController %@ %@", self.test, [self valueForKey:@"from"]);
 }
 
 - (void)back {
-    SpaceShuttleTransitionTask *task = [[SpaceShuttleTransitionTask alloc] initWithDepature:self];
-    task.transitionStyle = SpaceShuttleTransitionStyleDismiss;
-    task.supplies = @{@"test":@1};
-    [task launch];
+    [self.navigationController popViewControllerAnimated:YES supplies:@{@"test": @1}];
 }
 
 @end
