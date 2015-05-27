@@ -30,7 +30,7 @@ Add one line of code to your precompiled header, or import it where you need.
 
 ## How to use
 
-### push
+### Push
 
 ```
 [self.navigationController pushViewController:succViewController
@@ -38,7 +38,7 @@ Add one line of code to your precompiled header, or import it where you need.
                                     supplies:@{@"test":@1}];
 ```
 
-### pop
+### Pop
 
 ```
 [self.navigationController popViewControllerAnimated:YES
