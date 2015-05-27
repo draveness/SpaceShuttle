@@ -1,4 +1,4 @@
-# SpaceShuttle [![Version](http://img.shields.io/cocoapods/v/SpaceShuttle.svg?style=flat)](http://cocoadocs.org/docsets/SpaceShuttle) [![Build Status](https://travis-ci.org/Draveness/SpaceShuttle.svg?branch=1.0.0)](https://travis-ci.org/Draveness/SpaceShuttle) ![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg) ![Platform](https://img.shields.io/badge/platform-%20iOS%20-lightgrey.svg)
+# SpaceShuttle [![Version](http://img.shields.io/cocoapods/v/SpaceShuttle.svg?style=flat)](http://cocoadocs.org/docsets/SpaceShuttle) [![Build Status](https://travis-ci.org/Draveness/SpaceShuttle.svg?branch=master)](https://travis-ci.org/Draveness/SpaceShuttle) ![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg) ![Platform](https://img.shields.io/badge/platform-%20iOS%20-lightgrey.svg)
 
 A more easily way to passing values across views
 
