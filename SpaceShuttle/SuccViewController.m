@@ -29,7 +29,8 @@
 }
 
 - (void)back {
-    [self.navigationController popViewControllerAnimated:YES supplies:@{@"test": @1}];
+    [self.navigationController popViewControllerAnimated:YES
+                                                supplies:@{@"test": @1}];
 }
 
 @end

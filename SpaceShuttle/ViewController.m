@@ -37,7 +37,10 @@
 
 - (void)push {
     SuccViewController *succViewController = [[SuccViewController alloc] init];
-    [self.navigationController pushViewController:succViewController animated:YES supplies:@{@"test":@1}];
+    [self.navigationController pushViewController:succViewController
+                                         animated:YES
+                                         supplies:@{@"test":@1}];
+
 }
 
 @end
